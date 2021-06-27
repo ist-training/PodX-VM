@@ -50,7 +50,7 @@ variable "vsphere_vm_cpu" {
 variable "vsphere_vm_memory" {
   type = number
   description = "the amount of memory in MB"
-  default = 512
+  default = 1024
 }
 
 variable "vsphere_vm_guest" {
