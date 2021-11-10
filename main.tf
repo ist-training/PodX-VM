@@ -5,17 +5,6 @@ terraform {
       version = "2.0.1"
     }
   }
-  
-  # Trying out github actions
-  backend "remote" {
-         # The name of your Terraform Cloud organization.
-         organization = "ist-training"
-
-         # The name of the Terraform Cloud workspace to store Terraform state files in.
-         workspaces {
-           name = "PodX-VM"
-         }
-  }
 }
 
 provider "vsphere" {
