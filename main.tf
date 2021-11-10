@@ -6,7 +6,7 @@ terraform {
     }
   }
 }
-
+# Test 1
 provider "vsphere" {
   user           = var.vsphere_user
   password       = var.vsphere_password
