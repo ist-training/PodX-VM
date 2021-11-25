@@ -9,21 +9,25 @@ variable "vsphere_password" {
 variable "vsphere_server" {
   type = string
   description = "the hostname or ip address of your vcenter server"
+  default = "10.154.8.166"
 }
 
 variable "vsphere_datacenter" {
   type = string
   description = "the name of the datacenter"
+  default = "IST_DC"
 }
 
 variable "vsphere_datastore" {
   type = string
   description = "the name of the datastore"
+  default = "IST-DC-01"
 }
 
 variable "vsphere_vm_template" {
   type = string
   description = "the name of the vm template"
+  default = "TerraformVM-template"
 }
 
 variable "vsphere_vm_name" {
@@ -34,11 +38,13 @@ variable "vsphere_vm_name" {
 variable "vsphere_resource_pool" {
   type = string
   description = "the name of the resourcepool for examples: Cluster1/Resources " 
+  default = "IST_CLUSTER/Resources"
 }
 
 variable "vsphere_vm_portgroup" {
   type = string
   description = "the name of the portgroup"
+  default = "VM Network"
 }
 
 variable "vsphere_vm_cpu" {
