@@ -6,10 +6,27 @@ variable "vsphere_password" {
   type = string
   description = "The password for vsphere"
 }
+
+variable "vsphere_vm_name" {
+  type = string
+  description = "the name of the vm"
+}
+
+variable "vsphere_folder" {
+  description = "vm folder"
+  type = string
+  #default    = false
+}
+
+variable "vsphere_vm_cpu" {
+  type = number
+  description = "the number of vCpus"
+  #default = 1
+}
 variable "vsphere_server" {
   type = string
   description = "the hostname or ip address of your vcenter server"
-  default = "10.154.8.166"
+  default = "	10.154.8.166"
 }
 
 variable "vsphere_datacenter" {
@@ -27,12 +44,7 @@ variable "vsphere_datastore" {
 variable "vsphere_vm_template" {
   type = string
   description = "the name of the vm template"
-  default = "TerraformVM-template"
-}
-
-variable "vsphere_vm_name" {
-  type = string
-  description = "the name of the vm"
+  default = "TerraformVM-template-v2"
 }
 
 variable "vsphere_resource_pool" {
@@ -45,12 +57,6 @@ variable "vsphere_vm_portgroup" {
   type = string
   description = "the name of the portgroup"
   default = "VM Network"
-}
-
-variable "vsphere_vm_cpu" {
-  type = number
-  description = "the number of vCpus"
-  default = 1
 }
 
 variable "vsphere_vm_memory" {
@@ -82,9 +88,5 @@ variable "linked_clone" {
   default     = false
 }
 
-variable "vsphere_folder" {
-  description = "vm folder"
-  type = string
-  #default    = false
-}
+
 
