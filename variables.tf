@@ -26,7 +26,7 @@ variable "vsphere_vm_cpu" {
 variable "vsphere_server" {
   type = string
   description = "the hostname or ip address of your vcenter server"
-  default = "	10.154.8.166"
+  default = "10.154.8.166"
 }
 
 variable "vsphere_datacenter" {
